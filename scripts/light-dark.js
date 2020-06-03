@@ -12,7 +12,7 @@ const initialColors = {
     titleColor: getStyle(html, "--title-color"),
     primaryColor: getStyle(html, "--primary-color"),
     bgForm: getStyle(html, "--bg-form"),
-    field: getStyle(html, "--field")
+    field: getStyle(html, "--field"),
 }
 
 const darkMode = {

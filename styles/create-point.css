@@ -123,5 +123,23 @@ form button:hover {
     align-items: center;
     justify-content: space-between;
     text-align: center;
+    cursor: pointer;
 }
 
+.items-grid li span {
+    margin-top: 12px;
+    flex: 1;/*tamanho q preenche sozinho*/
+    display: flex;
+    align-items: center;
+    color: var(--span);
+}
+
+.items-grid li.selected {
+    background: #e1faec;
+    border: 2px solid #34cb79;
+}
+
+.items-grid li img,
+.items-grid li span {
+    pointer-events: none; /*Perde o evento de pointer/click */
+}
