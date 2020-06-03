@@ -33,7 +33,7 @@ function getCitys(event) {
      .then( citys => {
 
         for ( const city of citys ) {
-            citySelect.innerHTML += `<option value="${city.id}">${city.nome}</option>`
+            citySelect.innerHTML += `<option value="${city.nome}">${city.nome}</option>`
         }
 
         citySelect.disabled = false
