@@ -31,21 +31,3 @@
         background-position-y: 200px;
     }
 }
-
-@media (max-height:790px) {
-    #page-home main h1{
-        margin-top: -150px;
-        font-size: 30px;
-        margin-bottom: -15px;
-    }
-
-    #page-home main p {
-        margin-bottom: -15px;
-        font-size: 15px;
-    }
-
-    #page-home header a {
-        bottom: 100px;
-    }
-
-}

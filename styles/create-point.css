@@ -27,7 +27,7 @@
 }
 
 form {
-    background-color: white;
+    background-color: var(--bg-form);
     margin: 80px auto;
     padding: 64px;
     border-radius: 8px;

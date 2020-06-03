@@ -7,15 +7,21 @@
     <link rel="stylesheet" href="styles/create-point.css">
     <link rel="stylesheet" href="styles/responsive.css">
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/light-dark.css">
     <title>Criar um ponto de coleta</title>
 </head>
 <body>
 
     <div id="page-create-point">
 
+            <div class="toggle">
+                <input id="switch" type="checkbox" name="theme">
+                <label for="switch">Toggle</label>
+            </div>    
+
             <header>
-                <img src="/assets/logo.svg" alt="Logomarca">
-                <a href="#">
+                <img src="/assets/logo.svg" alt="Logomarca" id="svg">
+                <a href="index.html">
                     <span></span>
                     Voltar para home</a>
             </header>
@@ -67,7 +73,7 @@
             </form>
 
     </div>
-
+    <script src="scripts/light-dark.js"></script>
     <script src="/scripts/create-point.js"></script>
 </body>
 </html>
