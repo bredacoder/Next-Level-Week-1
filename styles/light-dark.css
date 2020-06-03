@@ -23,13 +23,13 @@
     left: 3px;
     width: 20px;
     height: 20px;
-    background-color: white;
+    background-color: var(--bg-form);
     border-radius: 90px;
     transition: 0.3s;
 }
 
 .toggle input:checked + label {
-    background-color: grey;
+    background-color: #ecebeb;
 }
 
 .toggle input:checked + label::after {
