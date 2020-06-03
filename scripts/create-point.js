@@ -18,10 +18,15 @@ function getCitys(event) {
     const citySelect = document.querySelector('[name=city]')
     const stateInput = document.querySelector('[name=state]')
 
-
     const ufValue = event.target.value
+
+    const indexOfSelectedState = event.target.selectedIndex
+    stateInput.value = event.target.options[indexOfSelectedState].text
     
     const url = `https://servicodados.ibge.gov.br/api/v1/localidades/estados/${ufValue}/municipios`
+
+    citySelect.innerHTML = "<option value>Selecione a Cidade</option>" // Limpa o campo antes de fz a chamada
+    citySelect.disabled = true
 
     fetch(url)
      .then( res => res.json() )
