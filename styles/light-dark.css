@@ -6,6 +6,7 @@
 
 .toggle label {
     margin-top: 30px;
+    margin-bottom: -100px;
     cursor: pointer;
     text-indent: -9999px;
     width: 52px;
