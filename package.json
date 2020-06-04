@@ -1,0 +1,25 @@
+{
+  "name": "nlw",
+  "scripts": {
+    "start": "nodemon src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanielFelipeDeveloper/Next-Level-Week-1.git"
+  },
+  "keywords": [
+    "JavaScript,Html,Css"
+  ],
+  "author": "Daniel Felipe Breda da Silva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DanielFelipeDeveloper/Next-Level-Week-1/issues"
+  },
+  "homepage": "https://github.com/DanielFelipeDeveloper/Next-Level-Week-1#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
