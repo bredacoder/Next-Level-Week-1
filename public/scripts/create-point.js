@@ -2,14 +2,14 @@ function populateUFs() {
     const ufSelect = document.querySelector('select[name=uf]')
 
     fetch('https://servicodados.ibge.gov.br/api/v1/localidades/estados')
-     .then( res => res.json() )
-     .then( states => {
+        .then(res => res.json())
+        .then(states => {
 
-        for( let state of states ) { //entra nos estados pega um estado armazena na let state e entra no bloco de código
-            ufSelect.innerHTML += `<option value="${state.id}">${state.nome}</option>`
-        }
+            for (let state of states) { //entra nos estados pega um estado armazena na let state e entra no bloco de código
+                ufSelect.innerHTML += `<option value="${state.id}">${state.nome}</option>`
+            }
 
-     })
+        })
 }
 
 populateUFs()
@@ -22,23 +22,23 @@ function getCitys(event) {
 
     const indexOfSelectedState = event.target.selectedIndex
     stateInput.value = event.target.options[indexOfSelectedState].text
-    
+
     const url = `https://servicodados.ibge.gov.br/api/v1/localidades/estados/${ufValue}/municipios`
 
     citySelect.innerHTML = "<option value>Selecione a Cidade</option>" // Limpa o campo antes de fz a chamada
     citySelect.disabled = true
 
     fetch(url)
-     .then( res => res.json() )
-     .then( citys => {
+        .then(res => res.json())
+        .then(citys => {
 
-        for ( const city of citys ) {
-            citySelect.innerHTML += `<option value="${city.nome}">${city.nome}</option>`
-        }
+            for (const city of citys) {
+                citySelect.innerHTML += `<option value="${city.nome}">${city.nome}</option>`
+            }
 
-        citySelect.disabled = false
+            citySelect.disabled = false
 
-     })
+        })
 
 }
 
@@ -51,7 +51,7 @@ document
 
 const itemsToCollect = document.querySelectorAll(".items-grid li")
 
-for ( let item of itemsToCollect ) {
+for (let item of itemsToCollect) {
     item.addEventListener("click", handleSelectedItem)
 }
 
@@ -70,14 +70,14 @@ function handleSelectedItem(event) {
     // verificar se existem itens selecionados, se sim
     // pegar os itens selecionados
 
-    const alreadySelected = selectedItems.findIndex( item => { // procura o index e executa uma função pra cada item selecionado e retorna true/false
+    const alreadySelected = selectedItems.findIndex(item => { // procura o index e executa uma função pra cada item selecionado e retorna true/false
         const itemFound = item == itemId
         return itemFound
-    }) 
+    })
 
     // se ja estiver selecionado, tirar da seleção
-    if(alreadySelected >= 0) {
-        const filteredtItems = selectedItems.filter( item => {
+    if (alreadySelected >= 0) {
+        const filteredtItems = selectedItems.filter(item => {
             const itemIsDifferent = item != itemId
             return itemIsDifferent
         })
