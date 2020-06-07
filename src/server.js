@@ -7,6 +7,9 @@ const db = require('./database/db')
 // configurar pasta pública
 server.use(express.static("public"))
 
+// habilitar o uso do req.doby na aplicação
+server.use(express.urlencoded( { extended: true } ))
+
 // Template Engine
 const nunjucks = require("nunjucks");
 /*                 pastas do html*/  
@@ -34,16 +37,57 @@ server.get("/create-point", (req,res) => {
 
 server.post("/savepoint", (req,res) => {
 
+    // req.body: O corpo do nosso formulário
+    
+    // iserir dados no banco de dados
+    const query = ` 
+        INSERT INTO places (
+            image,
+            name,
+            address,
+            address2,
+            state,
+            city,
+            items
+        ) VALUES (?,?,?,?,?,?,?);
+    `
+    
+    const values = [
+        req.body.image,
+        req.body.name,
+        req.body.address,
+        req.body.address2,
+        req.body.state,
+        req.body.city,
+        req.body.items
+    ]
 
+    function afterInsertData(err) {
+        if(err) {
+            console.log(err)
+            return res.render("create-point.html", { error: true })
+        }
 
-    return res.send("ok")
+        console.log("Dados enviados com sucesso:")
+        console.log(this)
+
+        return res.render("create-point.html", { saved: true })
+    }
+    
+    db.run(query, values, afterInsertData)
 })
 
 server.get("/search", (req,res) => {
 
-    // pegar os dados do banco de dados
+    const search = req.query.search
 
-    db.all(`SELECT * FROM places`, function(err, rows) {
+    if(search == "") {
+        // pesquisa vazia
+        return res.render("search-results.html", { total: 0 } )
+    } 
+
+    // pegar os dados do banco de dados
+    db.all(`SELECT * FROM places WHERE city LIKE '%${search}%'`, function(err, rows) {
         if(err) {
             console.log(err)
         }

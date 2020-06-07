@@ -89,3 +89,33 @@
     background-color: #2fb85e;
     cursor: pointer;
 }
+
+/* Isto é para o modal point created */
+
+#modal.point .content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#modal.point h1 {
+    color: white;
+
+    margin-top: 32px;
+}
+
+#modal.error img {
+    width: 125px;
+    height: 125px;
+}
+
+#modal.error .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#modal.error h1 {
+    color: white;
+    margin-top: 10px;
+}

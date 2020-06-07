@@ -78,6 +78,7 @@ main .card p {
     color: #6c6c80;
 }
 
+
 body:after {
     content:"";
     position: fixed;

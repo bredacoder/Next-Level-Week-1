@@ -1,4 +1,4 @@
-{% extends "partials/layout.html"%}
+{% extends "layout.html"%}
 
 {% set pageId = "page-create-point" %}
 
@@ -8,6 +8,7 @@
 
 {% block styles %}
     <link rel="stylesheet" href="styles/create-point.css">
+    <link rel="stylesheet" href="styles/modal.css">
 {% endblock styles %}
 
 {% block content %}
@@ -114,6 +115,16 @@
     </form>
 
 {% endblock content %}
+
+{% block modal %}
+     {% if saved %}
+        {%include "partials/point-created.html"%}
+    {% endif %}
+
+    {% if error %}
+        {%include "partials/point-created-error.html"%}
+    {% endif %}
+{% endblock modal %}
 
 {% block scripts %}
     <script src="/scripts/create-point.js"></script>
