@@ -24,15 +24,11 @@
 </p>
 
 <p align="center">
-<image src="" />
+<image src="https://github.com/DanielFelipeDeveloper/Next-Level-Week-1/blob/master/public/assets/img/ecoletaform.png" />
 </p>
-
-<p align="center">
-<image src="" />
-</p>
-
 
 <h2> <img src= "https://img.icons8.com/plasticine/2x/rocket.png" width="50px" height="50px" align="center"/>   O que é a Next Level Week? </h2>
+
   <p> Durante a primeira semana de junho de 2020, a Rocketseat disponibilizou um curso para desenvolver uma aplicação completa do 0. No projeto de nível Starter, dediquei 5 dias para o projeto Ecoleta. Foi um projeto e tanto, onde aprendi muitos conceitos importantes para o desenvolvimento FullStack! Para construir a aplicação utilizamos conhecimentos de HTML, CSS, Javascript, Node.js SQLite e Nunjucks</p>
   
  <img src = https://github.com/mjulialobo/Next-Level-Week/blob/master/public/extras-aula-1/icones/logo.svg width="20% " align="center">
