@@ -5,12 +5,7 @@
        src="https://github.com/DanielFelipeDeveloper/Next-Level-Week-1/blob/master/public/assets/logo.svg" 
        width="300" height="100"/></br>
 </p>
-
-<p align="center">
-<a href="#sobre-memo">Sobre</a>&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;
-<a href="#tecnologias-rocket">Tecnologias</a>&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;
-</p>
-
+                               
 <p align="center">
 <image src="https://img.shields.io/badge/JavaScript-Node.js-NunJucks"/>
 </p>
